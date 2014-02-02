@@ -7,7 +7,7 @@
 テーブル名: ひらがな
 
 |id|ひらがな|
-|:-|:-|
+|---|---|
 |1|ああああああああああああ|
 |2|かかかかかかかかかかかか|
 |3|ささささささささささささ|
@@ -17,7 +17,7 @@
 テーブル名:英語
 
 |id|英語|
-|:-|:-|
+|---|---|
 |1|AAAAAAAAAAAAAAAAA|
 |2|BBBBBBBBBBBBBBBBBBBBB|
 |3|CCCCCCCCCCCCCCCCC|
@@ -29,7 +29,7 @@
 とすれば
 
 |id|ひらがな|英語|
-|:-|:-|:-|
+|---|---|---|
 |1|ああああああああああああ|AAAAAAAAAAAA|
 |2|かかかかかかかかかかかか|BBBBBBBBBBBBBBB|
 |3|ささささささささささささ|CCCCCCCCCCCC|
@@ -41,7 +41,7 @@
 	FROM ひらがな left join 英語 on ひらがな.id = 英語.id
 ###結果
 |id|ひらがな|英語|
-|:-|:-|:-|
+|---|---|---|
 |1|ああああああああああああ|AAAAAAAAAAAA|
 |2|かかかかかかかかかかかか|BBBBBBBBBBBBBBB|
 |3|ささささささささささささ|CCCCCCCCCCCC|
@@ -52,7 +52,7 @@
 	FROM ひらがな right join 英語 on ひらがな.id = 英語.id
 
 |id|ひらがな|英語|
-|:-|:-|:-|
+|---|---|---|
 |1|ああああああああああああ|AAAAAAAAAAAA|
 |2|かかかかかかかかかかかか|BBBBBBBBBBBBBBB|
 |3|ささささささささささささ|CCCCCCCCCCCC|
