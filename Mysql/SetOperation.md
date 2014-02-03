@@ -68,6 +68,7 @@ select * from table1 union select * from table2;
 
 #差
 ######差もMySQLにはない
+ないので、副問い合わせを用いて実現する
 
 #直積 CROSS JOIN
 コマンド
