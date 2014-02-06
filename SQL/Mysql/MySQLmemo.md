@@ -62,9 +62,49 @@ drop table "テーブル名";
 ~~~
 insert into "テーブル名 " ("フィールドのリスト") values ("値のリスト);
 ~~~
+
+フィールドのリストは、省略しても大丈夫
+
+~~~
+insert into "テーブルの名前" values 値のリスト
+~~~
+フィールドに左から対応する値がセットされる。
+
 ##レコードの一覧を見るには select文
 ~~~
 select * from "テーブル名";
+~~~
+
+###ちょっと便利な記法
+select * from "テーブル名" \G
+このとき、セミコロンはいらない
+出力形式が整形されてでてくる。
+
+###where
+~~~
+select * from "テーブル" where "条件"
+~~~
+<>, !=,
+
+~~~
+select * from "テーブル" where "フィールド" like "条件"
+~~~
+条件部では、
+~~~
+'%.com'
+~~~
+%は任意の文字列、_は任意の一文字を表す。
+
+### 並び替え order by
+~~~
+select * from "テーブル名" order by "フィールド名";
+select * from "テーブル名" order by "フィールド名" desc;
+~~~
+
+### 制限 limit
+~~~
+select * from score order by score limit 2;
+select * from score order by score limit 2, 2;
 ~~~
 
 ##レコードを更新する update文
@@ -105,4 +145,21 @@ on A.id = b.id
 
 #集合演算
 ##
+
+#おもしろ
+##乱数を取得
+~~~
+select rand();
+~~~
+
+##ランダムにフィールドを一つ
+~~~
+select * from "テーブル" order by rand() limit 1;
+~~~
+
+#文字列周り
+select length(テキスト) from
+select
+
+
 
